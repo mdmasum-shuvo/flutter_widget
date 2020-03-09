@@ -8,21 +8,57 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  final _data='Word';
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Home'),
-        ),
-        body: Padding(
-            padding: EdgeInsets.all(15),
-            child: Text(
-                'One of the best things about Android is just how customizable it is. Android phones let you personalize them to your heart’s content in order to improve the experience and express yourself. Changing fonts for Android seems like a logical extension of this philosophy, though it isn’t always as straightforward as you might expect.'
-                ' The good news is that where there is a will, there is a way! '
-                'Read on to learn how to change fonts for Android!',
-                textAlign: TextAlign.left,
+        appBar: AppBar(title: Text("HOME")),
+        body: Row(
+          children: <Widget>[
+            Container(
+                margin: EdgeInsets.all(25),
+                padding: EdgeInsets.all(10),
+                height: 80,
+                width: 80,
+                decoration: BoxDecoration(
+                    color: Colors.yellow, borderRadius: BorderRadius.circular(15)),
+                child: Icon(Icons.accessibility)
+            ),
+            Container(
+              margin: EdgeInsets.all(15),
+              padding: EdgeInsets.all(10),
+              height: 80,
+              width: 80,
+              decoration: BoxDecoration(
+                  color: Colors.yellow, borderRadius: BorderRadius.circular(15)),
+              child: Text(
+                _data,
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.green, fontStyle: FontStyle.italic))));
+                    color: Colors.red, fontSize: 20, fontStyle: FontStyle.italic),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(15),
+              padding: EdgeInsets.all(10),
+              height: 80,
+              width: 80,
+              decoration: BoxDecoration(
+                  color: Colors.yellow, borderRadius: BorderRadius.circular(15)),
+              child: Text(
+                _data,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.red, fontSize: 20, fontStyle: FontStyle.italic),
+              ),
+            ),
+
+            Column(
+              children: <Widget>[
+
+              ],)
+          ],
+        ));
   }
 }
